@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etkinlik 1 | Muhammet Derviş Aygan Ders Planı</title>
+    <style>
+        h1 {
+            padding: 10px;
+        }
+        
+        .table {
+            max-width: 100%;
+        }
+        
+        p {
+            font-size: 25px;
+            padding: 10px;
+        }
+        
+        table {
+            max-width: 100%;
+            padding: 20px;
+        }
+        
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        
+        th,
+        td {
+            padding: 15px;
+            text-align: left;
+        }
+        
+        #t01 tr:nth-child(even) {
+            background-color: #eee;
+        }
+        
+        #t01 tr:nth-child(odd) {
+            background-color: #fff;
+        }
+        
+        #t01 th {
+            background-color: black;
+            color: white;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Etkinlik 1 | Muhammet Derviş Aygan Ders Planı</h1>
+    <br>
+    <div class="table">
+
+    </div>
+    <p>Yukarıdaki tabloda verilen verileri çizgi grafiğine dönüştürerek etkinlik kağıdında bulunan grafik çizme bölümüne çiziniz.</p>
+    <p>Verilen verileri etkinlik kağıdında bulunan tabloya da geçirmeyi unutmayınız.</p>
+
+
+
+    <script>
+        var carpim = 50;
+        var item1 = Math.round(Math.random() * carpim)
+        var item2 = Math.round(Math.random() * carpim)
+        var item3 = Math.round(Math.random() * carpim)
+        var item4 = Math.round(Math.random() * carpim)
+        var item5 = Math.round(Math.random() * carpim)
+        var item6 = Math.round(Math.random() * carpim)
+        var item7 = Math.round(Math.random() * carpim)
+        var item8 = Math.round(Math.random() * carpim)
+        var item9 = Math.round(Math.random() * carpim)
+        var item10 = Math.round(Math.random() * carpim)
+        var item11 = Math.round(Math.random() * carpim)
+        var item12 = Math.round(Math.random() * carpim)
+
+        document.querySelector('.table').innerHTML += `
+        <table id="t01">
+  <tr>
+    <th>Değişkenler</th>
+    <th>Veri 1</th>
+    <th>Veri 2</th>
+    <th>Veri 3</th>
+    <th>Veri 4</th>
+    <th>Veri 5</th>
+    <th>Veri 6</th>
+   
+  </tr>
+  <tr>
+    <td>Veri grubu 1</td>
+    <td>${item7}</td>
+    <td>${item8}</td>
+    <td>${item9}</td>
+    <td>${item10}</td>
+    <td>${item11}</td>
+    <td>${item12}</td>
+  </tr>
+  <tr>
+    <td>Veri grubu 2</td>
+    <td>${item1}</td>
+    <td>${item2}</td>
+    <td>${item3}</td>
+    <td>${item4}</td>
+    <td>${item5}</td>
+    <td>${item6}</td>
+  </tr>
+
+  
+</table>
+        `
+    </script>
+</body>
+
+</html>
