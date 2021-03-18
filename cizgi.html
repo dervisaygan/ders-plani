@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammet Derviş Aygan Etkinlik Materyali</title>
+    <script>
+        window.onload = function() {
+            var item1 = Math.round(Math.random() * 100);
+            var item2 = Math.round(Math.random() * 100);
+            var item3 = Math.round(Math.random() * 100);
+            var item4 = Math.round(Math.random() * 100);
+            var item5 = Math.round(Math.random() * 100);
+            var item6 = Math.round(Math.random() * 100);
+            var item7 = Math.round(Math.random() * 100);
+            var item8 = Math.round(Math.random() * 100);
+            var item9 = Math.round(Math.random() * 100);
+            var item10 = Math.round(Math.random() * 100);
+            var item11 = Math.round(Math.random() * 100);
+            var item12 = Math.round(Math.random() * 100);
+            var chart = new CanvasJS.Chart("chartContainer", {
+                animationEnabled: true,
+                theme: "light2",
+                title: {
+                    text: "Muhammet Derviş Aygan Ders Planı Materyali"
+                },
+                data: [{
+                    type: "line",
+                    indexLabelFontSize: 16,
+                    dataPoints: [{
+                        y: item1
+                    }, {
+                        y: item2
+                    }, {
+                        y: item3,
+
+                    }, {
+                        y: item4
+                    }, {
+                        y: item5
+                    }, {
+                        y: item6
+                    }, {
+                        y: item7
+                    }, {
+                        y: item8
+                    }, {
+                        y: item9,
+
+                    }, {
+                        y: item9
+                    }, {
+                        y: item10
+                    }, {
+                        y: item11
+                    }]
+                }]
+            });
+            chart.render();
+
+        }
+    </script>
+</head>
+
+<body>
+    <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <p style="font-size: 25px;margin-top: 20px; padding: 10px;">Yukarıda verilen çizgi grafiği sayfayı her yenilediğinizde farklı değerler üretir.</p>
+    <p style="font-size: 25px;margin-top: 20px; padding: 10px;">Yukarıda verilen çizgi grafiğini en yüksek değer, en düşük değer kriterlerine göre inceleyerek tabloya dönüştürünüz. </p>
+    <p style="font-size: 25px;margin-top: 20px;padding: 10px;">Akıllı tahtadan giriyorsanız noktaların üzerine basılı tutarak, başka bir cihazdan giriyorsanız fareyi noktaların üzerine tutarak tam değerlerini öğrenebilirsiniz.</p>
+</body>
+
+</html>
