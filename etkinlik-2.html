@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etkinlik 2 - Muhammet Derviş Aygan</title>
+    <style>
+        .rsgg {
+            padding: 10px 20px;
+            font-size: 25px;
+            background-color: transparent;
+            border: none;
+            border: 1px solid gray;
+            outline: none;
+            cursor: pointer
+        }
+        
+        input {
+            padding: 5px;
+            font-size: 25px;
+            outline: navajowhite;
+        }
+        
+        label {
+            font-size: 25px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <button class="rsg rsgg">Rasgele grafik incele</button>
+    <button class="olustur rsgg">Aşağıdaki verilere göre daire grafiği oluştur</button>
+    <h3>Grafiği aşağıdaki verilere göre oluştur:</h3>
+    <label>Veri 1: </label> <input type="text" class="in1">
+    <br> <br>
+    <label>Veri 2: </label> <input type="text" class="in2">
+    <br><br>
+    <label>Veri 3: </label> <input type="text" class="in3">
+    <br><br>
+    <label>Veri 4: </label> <input type="text" class="in4">
+    <br><br>
+    <label>Veri 5: </label> <input type="text" class="in5">
+    <br><br>
+
+    <br><br>
+
+
+
+    <script>
+        window.onload = function() {
+
+            document.querySelector('.olustur').addEventListener('click', () => {
+                var in1 = document.querySelector('.in1');
+                var in2 = document.querySelector('.in2');
+                var in3 = document.querySelector('.in3');
+                var in4 = document.querySelector('.in4');
+                var in5 = document.querySelector('.in5');
+                var chart = new CanvasJS.Chart("chartContainer", {
+                    animationEnabled: true,
+                    title: {
+                        text: "Muhammet Derviş Aygan Ders Planı Materyali"
+                    },
+                    data: [{
+                        type: "pie",
+                        startAngle: 240,
+                        yValueFormatString: "##0.00\"%\"",
+                        indexLabel: "{label} {y}",
+                        dataPoints: [{
+                            y: Number(in1.value),
+                            label: "1. veri"
+                        }, {
+                            y: Number(in2.value),
+                            label: "2. veri"
+                        }, {
+                            y: Number(in3.value),
+                            label: "3. veri"
+                        }, {
+                            y: Number(in4.value),
+                            label: "4. veri"
+                        }, {
+                            y: Number(in5.value),
+                            label: "5. veri"
+                        }]
+                    }]
+                });
+                chart.render();
+            })
+
+
+
+            document.querySelector('.rsg').addEventListener('click', () => {
+                var toplam = 360;
+                var item1 = Math.round(Math.random() * 100);
+                toplam = toplam - item1;
+
+                var item2 = Math.round(Math.random() * 100);
+                toplam = toplam - item2
+
+                var item3 = Math.round(Math.random() * 200);
+                toplam = toplam - item3
+
+                var item4 = Math.round(Math.random() * 200);
+                toplam = toplam - item4
+
+                var item5 = toplam;
+                var chart = new CanvasJS.Chart("chartContainer", {
+                    animationEnabled: true,
+                    title: {
+                        text: "Muhammet Derviş Aygan Ders Planı Materyali"
+                    },
+                    data: [{
+                        type: "pie",
+                        startAngle: 240,
+                        yValueFormatString: "##0.00\"%\"",
+                        indexLabel: "{label} {y}",
+                        dataPoints: [{
+                            y: item1,
+                            label: "1. veri"
+                        }, {
+                            y: item2,
+                            label: "2. veri"
+                        }, {
+                            y: item3,
+                            label: "3. veri"
+                        }, {
+                            y: item4,
+                            label: "4. veri"
+                        }, {
+                            y: item5,
+                            label: "5. veri"
+                        }]
+                    }]
+                });
+                chart.render();
+
+
+
+            })
+        }
+    </script>
+</body>
+
+</html>
